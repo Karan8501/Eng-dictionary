@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Short+Stack&display=swap");
+
+.meanings_container {
+    margin: 20px auto;
+    place-items: center;
+    width: 500px;
+    display: grid;
+    padding: 20px 0 50px 0;
+    gap: 20px;
+}
+
+.meaning {
+    padding: 1rem;
+    border-radius: 7px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+}
+
+.meaning .speech {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.meaning .info {
+    margin-left: 1.5rem;
+}
+
+.meaning .info .def {
+    font-weight: 700;
+    font-family: "Short Stack", cursive;
+}
+
+.meaning .info div {
+    font-style: italic;
+    margin-top: 10px;
+    color: var(--second-text-color);
+}
+
+.meaning .info .alternative {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.alternative .antonyms,
+.alternative .synonyms {
+    margin-top: 5px;
+    line-height: 1.4;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+
+.synonyms p,
+.antonyms p {
+    display: inline-flex;
+    padding: 2px 5px;
+    margin: 2px;
+    border-radius: 10px;
+    color: white;
+}
+
+.origin {
+
+    text-align: left;
+    width: 100%;
+}
+
+.origin p span {
+    font-weight: 100;
+    font-family: system-ui;
+
+}
+
+.synonyms p {
+    background-color: green;
+}
+
+.antonyms p {
+    background-color: red;
+}
+
+audio {
+    display: none;
+}
+
+.audio-container {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.audio-container .speaker {
+
+    margin: 2px;
+    width: 50px;
+    border: 2px solid var(--second-text-color);
+    border-radius: 100px;
+    padding: 7px;
+    background-position-x: center;
+    height: 50px;
+    opacity: 0.5;
+    cursor: pointer;
+    background: var(--speaker-img);
+    animation: rotate_animation 2s 2 linear;
+
+}
+
+@keyframes rotate_animation {
+    0% {
+        pointer-events: none;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        pointer-events: all;
+        transform: rotate(360deg);
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    .meanings_container {
+        padding: 3% 3% 30% 3%;
+        width: 100%;
+    }
+
+    .dark-theme .meaning {
+        box-shadow: 0 0 10px white;
+    }
+
+    audio {
+        width: 100%;
+    }
+}
